@@ -47,7 +47,8 @@ services:
     networks:
       - slackarchive
   slackarchive:
-    image: dutchcoders/slackarchive:latest
+    context: ./slackarchive
+    dockerfile: ./Dockerfile
     environment:
       MONGODB_URI: mongodb://slackarchive:1234@mongodb:27017/slackarchive
     ports:
