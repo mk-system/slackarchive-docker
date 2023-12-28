@@ -1,6 +1,6 @@
 FROM golang:latest AS builder
 
-ADD . /go/src/github.com/dutchcoders/slackarchive
+ADD ./slackarchive /go/src/github.com/dutchcoders/slackarchive
 WORKDIR /go/src/github.com/dutchcoders/slackarchive
 
 ARG LDFLAGS=""
