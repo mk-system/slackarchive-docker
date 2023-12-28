@@ -1,9 +1,10 @@
 FROM golang:latest AS builder
 
-ADD /slackarchive /go/src/github.com/dutchcoders/slackarchive
+ADD . /go/src/github.com/dutchcoders/slackarchive
 WORKDIR /go/src/github.com/dutchcoders/slackarchive
 
 ARG LDFLAGS=""
+RUN ls
 RUN go build -tags="" -o /go/bin/app github.com/dutchcoders/slackarchive
 
 FROM debian:latest
